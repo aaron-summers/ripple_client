@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 
-const UserForm = ({ submit, header }) => {
+const SignupForm = ({ submit, header }) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -20,4 +20,4 @@ const UserForm = ({ submit, header }) => {
     )
 }
 
-export default UserForm
+export default SignupForm
