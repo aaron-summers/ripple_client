@@ -1,23 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+/ripple_client/node_modules
+/ripple_client/.pnp
+/ripple_client.pnp.js
 
 # testing
-/coverage
+/ripple_client/coverage
 
 # production
-/build
+/ripple_client/build
 
 # misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+/ripple_client/.DS_Store
+/ripple_client/.env.local
+/ripple_client/.env.development.local
+/ripple_client/.env.test.local
+/ripple_client/.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/ripple_client/npm-debug.log*
+/ripple_client/yarn-debug.log*
+/ripple_client/yarn-error.log*
