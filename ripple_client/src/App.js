@@ -18,8 +18,7 @@ class App extends React.Component {
 
   signUp = user => {
     API.signUp(user)
-      // .then(user => this.setState({ user }))
-      .then(user => console.log(user))
+      .then(user => this.setState({ user }))
   }
 
   logIn = user => {

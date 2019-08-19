@@ -35,7 +35,6 @@ const signUp = (user) => fetch(signupUrl, {
 }).then(jsonify)
     .then(saveToken)
     .catch(handleServerError)
-    .then(res => console.log(res))
 
 const logIn = (user) => fetch(loginUrl, {
     method: 'POST',
@@ -48,7 +47,7 @@ const logIn = (user) => fetch(loginUrl, {
     .catch(handleServerError)
 
 const validateUser = () => {
-    if (!localStorage.getItem('token')) return Promise.resolve({ error: 'no token found' })
+    if (!localStorage.getItem('token')) return Promise.resolve(undefined)
 
     return fetch(validateUrl, {
         headers: constructHeaders()
