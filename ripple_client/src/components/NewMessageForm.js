@@ -21,7 +21,11 @@ class NewMessageForm extends React.Component {
 
         fetch(`${API_ROOT}/messages`, {
             method: 'POST',
-            headers: HEADERS,
+            headers: {
+                "Accept": 'application/json',
+                "content-Type": "application/json",
+                "Authorization": `${localStorage.getItem("token")}`
+            },
             body: JSON.stringify(this.state)
         })
         this.setState({text: ''})

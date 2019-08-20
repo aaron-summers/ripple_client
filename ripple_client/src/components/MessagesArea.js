@@ -20,6 +20,6 @@ const orderedMessages = messages => {
         (a,b) => new Date(a.created_at) - new Date(b.created_at)
     )
     return sortedMessages.map(message => {
-        return <div key={message.id}>{message.text}</div>
+        return <div key={message.id}>{message.username}: {message.text}</div>
     })
 }
