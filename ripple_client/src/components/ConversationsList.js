@@ -53,7 +53,7 @@ class ConversationsList extends React.Component {
             />
           ) : null}
           <h2>Conversations</h2>
-          <ul>{mapConversations(conversations, this.handleClick)}</ul>
+          <div>{mapConversations(conversations, this.handleClick)}</div>
           <NewConversationForm />
           {activeConversation ? (
             <MessagesArea
@@ -81,9 +81,9 @@ class ConversationsList extends React.Component {
   const mapConversations = (conversations, handleClick) => {
     return conversations.map(conversation => {
       return (
-        <li key={conversation.id} onClick={() => handleClick(conversation.id)}>
+        <div key={conversation.id} onClick={() => handleClick(conversation.id)}>
           {conversation.title}
-        </li>
+        </div>
       );
     });
   };
