@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import API from './adapters/API';
 import Navbar from './components/Navbar';
+import ConversationsList from './components/ConversationsList';
 
 class App extends React.Component {
 
@@ -36,6 +37,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut}/>
+        <ConversationsList />
       </div>
     )
   }
