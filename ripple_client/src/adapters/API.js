@@ -47,7 +47,7 @@ const logIn = (user) => fetch(loginUrl, {
     .catch(handleServerError)
 
 const validateUser = () => {
-    if (!localStorage.getItem('token')) return Promise.resolve(undefined)
+    if (!localStorage.getItem('token')) return Promise.resolve()
 
     return fetch(validateUrl, {
         headers: constructHeaders()
