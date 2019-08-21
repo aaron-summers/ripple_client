@@ -9,6 +9,7 @@ import ActionCable from 'actioncable';
 // import { API_WS_ROOT } from './constants';
 
 const cable = ActionCable.createConsumer('ws://localhost:3000/cable');
+// const cable = ActionCable.createConsumer('ws://ripple-server.herokuapp.com/cable');
 // ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(
     // <ActionCableProvider url={API_WS_ROOT}>
