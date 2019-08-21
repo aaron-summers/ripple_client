@@ -1,4 +1,4 @@
-const endpoint = 'https://ripple-server.herokuapp.com/api/v1'
+const endpoint = 'https://ripple-server.herokuapp.com'
 const signupUrl = `${endpoint}/users`
 const loginUrl = `${endpoint}/login`
 const validateUrl = `${endpoint}/validate`
