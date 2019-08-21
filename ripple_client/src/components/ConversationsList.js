@@ -43,7 +43,7 @@ class ConversationsList extends React.Component {
       return (
         <div className="conversationsList">
           <ActionCableConsumer
-            channel = 'ConversationsChannel'
+            channel = {{ channel: 'ConversationsChannel' }}
             onReceived={this.handleReceivedConversation}
           />
           {this.state.conversations.length ? (
