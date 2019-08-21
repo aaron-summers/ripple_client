@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { API_WS_ROOT } from './constants';
 import { ActionCableProvider } from 'react-actioncable-provider'
 import ActionCable from 'actioncable';
+
+// import { API_WS_ROOT } from './constants';
 
 const cable = ActionCable.createConsumer('ws://localhost:3000/cable');
 // ReactDOM.render(<App />, document.getElementById('root'));

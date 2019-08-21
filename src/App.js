@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Main from './containers/Main';
-import API from './adapters/API';
+// import API from './adapters/API';
 // import Navbar from './components/Navbar';
 // import ConversationsList from './components/ConversationsList';
 

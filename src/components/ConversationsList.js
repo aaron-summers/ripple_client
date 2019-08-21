@@ -4,6 +4,7 @@ import { API_ROOT } from '../constants';
 import NewConversationForm from './NewConversationForm';
 import MessagesArea from './MessagesArea';
 import Cable from './Cable';
+import { Card } from 'react-bootstrap';
 
 class ConversationsList extends React.Component {
     state = {
@@ -52,15 +53,22 @@ class ConversationsList extends React.Component {
               handleReceivedMessage={this.handleReceivedMessage}
             />
           ) : null}
-          <h2>Conversations</h2>
-          <div>{mapConversations(conversations, this.handleClick)}</div>
+          <h2>Groups
+          </h2>
+          <div>
+          <Card className="row flex-row flex-nowrap card">
+          {
+            mapConversations(conversations, this.handleClick)
+          }
+          </Card>
+          </div>
           <NewConversationForm />
           {activeConversation ? (
             <MessagesArea
               conversation={findActiveConversation(
                 conversations,
                 activeConversation
-              )}
+              )} current_user={this.props.user}
             />
           ) : null}
         </div>
@@ -81,9 +89,13 @@ class ConversationsList extends React.Component {
   const mapConversations = (conversations, handleClick) => {
     return conversations.map(conversation => {
       return (
-        <div key={conversation.id} onClick={() => handleClick(conversation.id)}>
-          {conversation.title}
-        </div>
+        <Card className="card-content">
+          <Card.Title>
+            <div key={conversation.id} onClick={() => handleClick(conversation.id)}> 
+              {conversation.title}
+            </div>
+          </Card.Title>
+        </Card>
       );
     });
   };

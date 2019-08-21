@@ -1,5 +1,6 @@
 import React from 'react';
 import { API_ROOT, HEADERS } from '../constants/index';
+import {Form, Button} from 'react-bootstrap';
 
 class NewConversationForm extends React.Component {
 
@@ -23,18 +24,24 @@ class NewConversationForm extends React.Component {
 
     render = () => {
         return (
+            <>
+            <br/>
             <div className="newConversationForm">
-                <form onSubmit={this.handleSubmit}>
-                    <label>New Conversation:</label>
+                <Form onSubmit={this.handleSubmit}>
+                    <Form.Label>Create New Group:</Form.Label>
                     <br />
-                    <input
+                    <Form.Control className="textfield"
                         type="text"
+                        placeholder="New Group Name..."
                         value={this.state.title}
                         onChange={this.handleChange}
                     />
-                    <input type="submit" />
-                </form>
+                    <div className="form-button">
+                    <Button type="submit" variant="outline-info">submit</Button>
+                    </div>
+                </Form>
             </div>
+            </>
         )
     }
 }
