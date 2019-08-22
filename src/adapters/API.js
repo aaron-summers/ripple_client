@@ -30,6 +30,7 @@ const constructHeaders = (moreHeaders = {}) => (
 
 const signUp = (user) => fetch(signupUrl, {
     method: 'POST',
+    credentials: 'include',
     headers: {
         'Content-Type': 'application/json'
     },
@@ -40,6 +41,7 @@ const signUp = (user) => fetch(signupUrl, {
 
 const logIn = (user) => fetch(loginUrl, {
     method: 'POST',
+    credentials: 'include',
     headers: {
         'Content-Type': 'application/json'
     },
@@ -52,6 +54,7 @@ const validateUser = () => {
     if (!localStorage.getItem('token')) return Promise.resolve()
 
     return fetch(validateUrl, {
+        credentials: 'include',
         headers: constructHeaders()
     }).then(jsonify)
         .then(saveToken)
