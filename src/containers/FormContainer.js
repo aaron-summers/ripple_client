@@ -9,11 +9,13 @@ const FormContainer = ({ user, signUp, logIn, logOut}) => {
         <div>
             {
                 user ? <div>
-                <Navbar bg="dark" variant="dark">
-                    <div>
-                        <Navbar.Brand>Ripplee</Navbar.Brand>
-                        <Button variant="outline-info" onClick={logOut}>Log Out</Button>
+                <Navbar bg="dark" variant="dark" className="navbar">
+                    <div className="navbar-title">
+                        <Navbar.Brand className="title">Ripple</Navbar.Brand>
                     </div>
+                    <div className="navbar-logout">
+                        <Button className="logout-button" variant="outline-info" onClick={logOut}>Log Out</Button>
+                    </div> 
                 </Navbar>
                     <div> 
                         <ConversationsList user={user}/> </div>

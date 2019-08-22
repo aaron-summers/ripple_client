@@ -1,6 +1,6 @@
 import React from 'react';
 import { API_ROOT, HEADERS } from '../constants/index';
-import {Form, Button} from 'react-bootstrap';
+import {Form, Button, InputGroup} from 'react-bootstrap';
 
 class NewMessageForm extends React.Component {
     
@@ -35,18 +35,17 @@ class NewMessageForm extends React.Component {
     render = () => {
         return (
             <div className="newMessageForm">
-                <Form onSubmit={this.handleSubmit}>
-                    <Form.Label>New Message:</Form.Label>
-                    <br />
-                    <Form.Control className="textfield"
+                <Form inline onSubmit={this.handleSubmit}>
+                    <InputGroup>
+                    <Form.Control className="textfield-message"
                         type="text"
                         placeholder="New Message..."
                         value={this.state.text}
                         onChange={this.handleChange}
-                    />
-                    <div className="form-button">
-                    <Button type="submit" variant="outline-info">submit</Button>
-                    </div>
+                    /><InputGroup.Append>
+                    <Button className="form-button" type="submit" variant="outline-info">Send</Button>
+                    </InputGroup.Append>
+                    </InputGroup>
                 </Form>
             </div>
         )
