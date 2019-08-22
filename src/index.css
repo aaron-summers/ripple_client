@@ -122,6 +122,8 @@ code {
   /* clip-path: polygon(100% 100%, 0 100%, 20% 0, 100% 0%); */
   /* clip-path: circle(40% at 50% 50%); */
   transform-origin: center;
+}
+
 .textfield-message {
   width: 500px;
 }

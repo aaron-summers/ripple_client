@@ -1,18 +1,16 @@
-// const endpoint = 'https://ripple-server.herokuapp.com/api/v1'
-const endpoint = 'http://localhost:8080/api/v1'
+const endpoint = 'https://ripple-server.herokuapp.com/api/v1'
+// const endpoint = 'http://localhost:3000/api/v1'
 const signupUrl = `${endpoint}/users`
 const loginUrl = `${endpoint}/login`
 const validateUrl = `${endpoint}/validate`
 
-const jsonify = res => res.json()
+const jsonify = res => {
+    if (res.ok)
+        return res.json()
+    else
+        throw res.json()
 
-// {
-//     if (res.ok)
-//         return res.json()
-//     else
-//         throw res.json()
-
-// }
+}
 
 const handleServerError = response => {
     throw response

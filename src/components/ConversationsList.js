@@ -90,11 +90,13 @@ class ConversationsList extends React.Component {
     return conversations.map(conversation => {
       return (
         <Card className="card-content" key={conversation.id} onClick={() => handleClick(conversation.id)}>
-          <Card.Text>
+          
             <div className="group-card-text"> 
+            <Card.Text>
               {conversation.title}
+              </Card.Text>
             </div>
-          </Card.Text>
+          
         </Card>
       );
     });
