@@ -18,11 +18,19 @@ const FormContainer = ({ user, signUp, logIn, logOut}) => {
                     <div> 
                         <ConversationsList user={user}/> </div>
                     </div> :
-                    <>
+                    <div>
+                    <Navbar bg="dark" variant="dark">
+                        <div>
+                        <Navbar.Brand>Ripple</Navbar.Brand>
+                        </div>
+                    </Navbar>
+                        <div className="split left">
                         <SignupForm submit={signUp} header={'Sign up'} />
-                        or
+                        </div>
+                        <div className="split right">
                         <LoginForm submit={logIn} header={'Log in'} />
-                    </>
+                        </div>
+                    </div>
             }
         </div>
     )

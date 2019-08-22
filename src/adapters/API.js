@@ -4,12 +4,15 @@ const signupUrl = `${endpoint}/users`
 const loginUrl = `${endpoint}/login`
 const validateUrl = `${endpoint}/validate`
 
-const jsonify = res => {
-    if (res.ok)
-        return res.json()
-    else
-        throw res.json()
-}
+const jsonify = res => res.json()
+
+// {
+//     if (res.ok)
+//         return res.json()
+//     else
+//         throw res.json()
+
+// }
 
 const handleServerError = response => {
     throw response
