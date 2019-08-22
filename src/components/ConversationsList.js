@@ -53,7 +53,7 @@ class ConversationsList extends React.Component {
               handleReceivedMessage={this.handleReceivedMessage}
             />
           ) : null}
-          <h2>Groups
+          <h2 className="group">Groups
           </h2>
           <div>
           <Card className="row flex-row flex-nowrap card">
@@ -89,12 +89,12 @@ class ConversationsList extends React.Component {
   const mapConversations = (conversations, handleClick) => {
     return conversations.map(conversation => {
       return (
-        <Card className="card-content">
-          <Card.Title>
-            <div key={conversation.id} onClick={() => handleClick(conversation.id)}> 
+        <Card className="card-content" key={conversation.id} onClick={() => handleClick(conversation.id)}>
+          <Card.Text>
+            <div className="group-card-text"> 
               {conversation.title}
             </div>
-          </Card.Title>
+          </Card.Text>
         </Card>
       );
     });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { API_ROOT, HEADERS } from '../constants/index';
-import {Form, Button} from 'react-bootstrap';
+import {Form, Button, InputGroup} from 'react-bootstrap';
 
 class NewConversationForm extends React.Component {
 
@@ -29,16 +29,17 @@ class NewConversationForm extends React.Component {
             <div className="newConversationForm">
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Label>Create New Group:</Form.Label>
-                    <br />
+                    <InputGroup>
                     <Form.Control className="textfield"
                         type="text"
                         placeholder="New Group Name..."
                         value={this.state.title}
                         onChange={this.handleChange}
                     />
-                    <div className="form-button">
-                    <Button type="submit" variant="outline-info">submit</Button>
-                    </div>
+                    <InputGroup.Append>
+                    <Button className="form-button" type="submit" variant="outline-info">Create</Button>
+                    </InputGroup.Append>
+                    </InputGroup>
                 </Form>
             </div>
             </>

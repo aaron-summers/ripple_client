@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.navbar-logout{
+  margin-left: auto; 
+}
+
+.title {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -17,6 +25,7 @@ code {
   display: flex;
   width: 960px;
   margin: 0 auto;
+  background-color: #FAFAFA;
 }
 
 .card::-webkit-scrollbar {
@@ -28,6 +37,31 @@ code {
   min-width: 150px;
   min-height: 150px;
   margin: 5px;
+  background-color: #ffffff;
+}
+
+.form-inline {
+  align-items: center;
+  margin: 0 auto;
+  width: 20rem;
+  padding-top: 10px;
+}
+
+.input-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: center;
+  margin: 0 auto;
+  width: 30rem;
+}
+
+.group-card-text {
+  margin-top: 40%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  text-decoration-line: underline;
 }
 
 .textfield {
@@ -88,4 +122,74 @@ code {
   /* clip-path: polygon(100% 100%, 0 100%, 20% 0, 100% 0%); */
   /* clip-path: circle(40% at 50% 50%); */
   transform-origin: center;
+.textfield-message {
+  width: 500px;
+}
+
+.user-message {
+  margin-left: 10px;
+  text-align: left;
+}
+
+.message-card {
+  height: 400px;
+  width: 500px;
+  overflow-y: scroll;
+  margin: 0 auto;
+  background-color: #FAFAFA;
+}
+
+.messages-card {
+  width: 150px;
+  margin: 5px;
+  background-color: #536AEA;
+}
+
+.message-username {
+  text-align: center;
+  font-size: 17px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.message-text {
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.non-messages-card {
+  width: 150px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  background-color: #7C7C7D;
+}
+
+.non-user-message {
+  margin-left:auto;
+}
+
+.non-message-username {
+  text-align: center;
+  font-size: 17px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.non-message-text {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.messagesArea{
+  margin-top: 50px;
+}
+
+.group {
+  font-family: 'Nunito', sans-serif;
+  margin-top: 10px;
+}
+
+.message-title {
+  font-family: 'Nunito', sans-serif;
 }
